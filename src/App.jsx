@@ -18,8 +18,10 @@ export default function App() {
   useEffect(() => {
     const savedSearch = localStorage.getItem("search") || "";
     const savedCategory = localStorage.getItem("category") || "All";
+
     setSearch(savedSearch);
     setCategory(savedCategory);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // saved filtered when they changed
   useEffect(() => {
